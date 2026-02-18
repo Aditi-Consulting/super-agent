@@ -1,0 +1,64 @@
+# Environment variables
+.env
+.venv
+
+# PyCharm project files
+.idea/
+
+# Python cache/compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# MyPy / type checking
+.mypy_cache/
+.dmypy.json
+
+# C extensions
+*.so
+
+# Environment / virtualenvs
+.env*
+.envrc
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS
+.DS_Store
+Thumbs.db
