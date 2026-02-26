@@ -165,7 +165,7 @@ def classify_node(state):
         if "__error__" not in llm_json:
             llm_reasoning = llm_json.get("reasoning", "")
             if llm_reasoning:
-                reasoning = f"{llm_reasoning} (Issue type forced category to {final})."
+                reasoning = llm_reasoning
 
         suggested_agent = None
     elif "__error__" in llm_json:
