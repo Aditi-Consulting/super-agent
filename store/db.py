@@ -71,14 +71,17 @@ def upsert_alert(alert):
     cursor.close()
     conn.close()
 
-# def fetch_unprocessed(limit=10):
-#     conn = get_db_conn()
-#     cursor = conn.cursor(dictionary=True)
-#     cursor.execute("SELECT * FROM alerts WHERE classification IS NULL LIMIT %s", (limit,))
-#     rows = cursor.fetchall()
-#     cursor.close()
-#     conn.close()
-#     return rows
+def fetch_unprocessed(limit=10):
+    conn = get_db_conn()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute(
+        "SELECT * FROM alerts WHERE classification IS NULL ORDER BY inserted_at ASC LIMIT %s",
+        (limit,)
+    )
+    rows = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return rows
 
 def fetch_alert_by_id(alert_id):
     conn = get_db_conn()
